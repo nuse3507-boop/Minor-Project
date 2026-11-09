@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+node_modules/
+dist/
+.env
+*.db
+*.db-*
+private-data/
+*.egg-info/
+test-results/
+playwright-report/
+.test-tmp*/
+pytest-cache-files-*/

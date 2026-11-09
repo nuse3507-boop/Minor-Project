@@ -1,0 +1,25 @@
+{
+  "description": "Synthetic adversarial regression cases. Expected labels are engineering assertions, not human-adjudicated benchmark results.",
+  "cases": [
+    {
+      "id": "distant-exception",
+      "sections": [
+        {"id": "general", "source_id": "contract", "page": 1, "text": "We disclose information only with your consent."},
+        {"id": "fees", "source_id": "contract", "page": 2, "text": "The subscription costs ten units each month."},
+        {"id": "exception", "source_id": "contract", "page": 3, "text": "Notwithstanding the consent rule, we may disclose information when required by law."}
+      ],
+      "claim": "The policy says information is never disclosed without consent.",
+      "expected": "UNSUPPORTED",
+      "reason": "The distant legal-disclosure exception contradicts the universal statement."
+    },
+    {
+      "id": "missing-schedule",
+      "sections": [
+        {"id": "retention", "source_id": "policy", "page": 1, "text": "We retain records for the period specified in Schedule B."}
+      ],
+      "claim": "The policy establishes that records are retained for thirty days.",
+      "expected": "AMBIGUOUS",
+      "reason": "Referenced Schedule B was not supplied; the period cannot be established."
+    }
+  ]
+}
